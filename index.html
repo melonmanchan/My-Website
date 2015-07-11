@@ -40,7 +40,7 @@
     <div class="container" id="about-me">
         <div class="row center">
             <div class="col s12">
-                 <h2 class="header">About me</h2>
+                 <h3 class="header">About me</h3>
             </div>
         </div>
         <div class="row center">
@@ -48,12 +48,13 @@
                 <img class="center my-face" src="https://placehold.it/250x250" width="250">
             </div>
         </div>
-        <p class="flow-text center">Hello there! I'm a developer currently living in Jyväskylä, Finland.</p>
+        <p class="flow-text center">Hello there! I'm a programmer and engineering student, currently stationed in Jyväskylä, Finland. This is my website! Anyhow, here's
+             <a class="orange-text resume transition" href="index.html"> my resume</a>, and down there you can look at some of the other stuff I've made.</p>
     </div>
     <div class="container" id="projects">
         <div class="row center">
             <div class="col s12">
-                <h2 class="header">Projects</h2>
+                <h3 class="header">Projects</h3>
             </div>
         </div>
         <p class="flow-text">Hello there! I'm a programmer currently living in Jyväskylä, Finland</p>
@@ -61,7 +62,7 @@
     <div class="container" id="contact-me">
         <div class="row center">
             <div class="col s12">
-                <h2 class="header">Contact</h2>
+                <h3 class="header">Contact</h3>
             </div>
             <p class="flow-text">Got something to say? Shoot me a message.</p>
 
@@ -74,17 +75,17 @@
                             <label for="email">Email</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="first_name" type="text" required class="validate">
-                        <label for="first_name">Subject</label>
+                        <input id="subject" type="text" required class="validate">
+                        <label for="subject">Subject</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Message</label>
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Message</label>
                     </div>
                 </div>
-                <button class="btn-large waves-effect waves-light orange" type="submit" name="action">
+                <button id="send-msg" class="btn-large waves-effect waves-light orange" type="submit" name="action">
                     <i class="fa fa-envelope-o left"></i>Send
                 </button>
             </form>
@@ -95,20 +96,30 @@
 <footer class="page-footer light-blue lighten-1">
     <div class="container">
         <div class="row ">
-            <div class="col s4 center-align"> <a href="https://github.com/melonmanchan" target="_blank"><i class="fa fa-github-alt fa-2x social-icon"></i> </a></div>
-            <div class="col s4 center-align"> <a href="https://www.facebook.com/matti.jokitulppo" target="_blank"><i class="fa fa-facebook-square fa-2x social-icon"></i> </a></div>
-            <div class="col s4 center-align"> <a href="google.com" target="_blank"><i class="fa fa-linkedin fa-2x social-icon"></i> </a></div>
+            <div class="col s4 center-align"> <a href="https://github.com/melonmanchan" target="_blank"><i class="fa fa-github-alt fa-2x social-icon transition"></i> </a></div>
+            <div class="col s4 center-align"> <a href="https://www.facebook.com/matti.jokitulppo" target="_blank"><i class="fa fa-facebook-square fa-2x social-icon transition"></i> </a></div>
+            <div class="col s4 center-align"> <a href="google.com" target="_blank"><i class="fa fa-linkedin fa-2x social-icon transition"></i> </a></div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
             <div class="center-align">
-            Made with a reasonable amount of  <i class="fa fa-heart heart"></i>
+            Made with some <i class="fa fa-heart heart"></i> and a little <i class="fa fa-frown-o frown"></i>
             </div>
         </div>
 
     </div>
 </footer>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Thanks!</h4>
+        <p>Thank you for your interest! I'll try to get back to you ASAP.</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Alright, got it!</a>
+    </div>
+</div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
