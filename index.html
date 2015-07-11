@@ -39,58 +39,64 @@
 
 <!--Import jQuery before materialize.js-->
 <main>
-    <div class="container wow" id="about-me">
-        <div class="row center">
-            <div class="col s12">
-                 <h3 class="header">About me</h3>
+    <div class="wow fadeIn">
+        <div class="container" id="about-me">
+            <div class="row center">
+                <div class="col s12">
+                     <h3 class="header">About me</h3>
+                </div>
             </div>
-        </div>
-        <div class="row center">
-            <div class="col s12">
-                <img class="center my-face" src="img/matti.jpg" width="250">
+            <div class="row center">
+                <div class="col s12">
+                    <img class="center my-face" src="img/matti.jpg" width="250">
+                </div>
             </div>
+            <p class="flow-text center">Hello there! I'm a programmer and engineering student, currently stationed in Jyväskylä, Finland. This is my website! Anyhow, here's
+                 <a class="orange-text resume transition" href="index.html"> my resume</a>, and down there you can look at some of the neat stuff I've made.</p>
         </div>
-        <p class="flow-text center">Hello there! I'm a programmer and engineering student, currently stationed in Jyväskylä, Finland. This is my website! Anyhow, here's
-             <a class="orange-text resume transition" href="index.html"> my resume</a>, and down there you can look at some of the neat stuff I've made.</p>
     </div>
-    <div class="container wow" id="projects">
-        <div class="row center">
-            <div class="col s12">
-                <h3 class="header">Projects</h3>
+    <div class="wow fadeIn">
+        <div class="container" id="projects">
+            <div class="row center">
+                <div class="col s12">
+                    <h3 class="header">Projects</h3>
+                </div>
             </div>
+            <p class="flow-text">Hello there! I'm a programmer currently living in Jyväskylä, Finland</p>
         </div>
-        <p class="flow-text">Hello there! I'm a programmer currently living in Jyväskylä, Finland</p>
     </div>
-    <div class="container wow" id="contact-me">
-        <div class="row center">
-            <div class="col s12">
-                <h3 class="header">Contact</h3>
-            </div>
-            <p class="flow-text">Got something to say? Shoot me a message.</p>
+    <div class="wow fadeIn">
+        <div class="container" id="contact-me">
+            <div class="row center">
+                <div class="col s12">
+                    <h3 class="header">Contact</h3>
+                </div>
+                <p class="flow-text">Got something to say? Shoot me a message.</p>
 
-        </div>
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="email" type="email" required class="validate">
-                            <label for="email">Email</label>
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="email" type="email" required class="validate">
+                                <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="subject" type="text" required class="validate">
+                            <label for="subject">Subject</label>
+                        </div>
                     </div>
-                    <div class="input-field col s6">
-                        <input id="subject" type="text" required class="validate">
-                        <label for="subject">Subject</label>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="message" class="materialize-textarea"></textarea>
-                        <label for="message">Your message</label>
-                    </div>
-                </div>
-                <button id="send-msg" class="btn-large waves-effect waves-light orange" type="submit" name="action">
-                    <i class="fa fa-envelope-o left"></i>Send
-                </button>
-            </form>
+                    <button id="send-msg" class="btn-large waves-effect waves-light orange" type="submit" name="action">
+                        <i class="fa fa-envelope-o left"></i>Send
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 </main>
@@ -127,7 +133,7 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
-        //new WOW().init();
+        new WOW().init();
     </script>
     <script type="text/javascript" src="js/site.js"></script>
 </body>
