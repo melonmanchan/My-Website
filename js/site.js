@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
     $(".button-collapse").sideNav();
-
     $("form").submit(function (event) {
        event.preventDefault();
        var msg      =  $("#message").val();
