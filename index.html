@@ -4,7 +4,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/site.css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -12,8 +12,9 @@
 <body>
 
 <!-- Top navigation bar -->
+<header>
 <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Matti Jokitulppo</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo center">Matti Jokitulppo</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="#">About me</a></li>
             <li><a href="#">My projects</a></li>
@@ -25,15 +26,36 @@
             <li><a href="#">My projects</a></li>
             <li><a href="#">Contact me!</a></li>
         </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-bars"></i></a>
     </div>
 </nav>
-
+</header>
 
 <!--Import jQuery before materialize.js-->
-<div class="container">
-    <p>Hello world!</p>
-</div>
+<main></main>
+    <div class="container">
+        <p>Hello world!</p>
+    </div>
+</main>
+
+<footer class="page-footer light-blue lighten-1">
+    <div class="container">
+        <div class="row ">
+            <div class="col s4 center-align"> <a href="https://github.com/melonmanchan" target="_blank"><i class="fa fa-github-alt fa-2x social-icon"></i> </a></div>
+            <div class="col s4 center-align"> <a href="https://www.facebook.com/matti.jokitulppo" target="_blank"><i class="fa fa-facebook-square fa-2x social-icon"></i> </a></div>
+            <div class="col s4 center-align"> <a href="google.com" target="_blank"><i class="fa fa-linkedin fa-2x social-icon"></i> </a></div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+
+        <div class="container">
+            Made with a reasonable amount of  <i class="fa fa-heart heart"></i>
+            <a class="grey-text text-lighten-4 right" href="http://materializecss.com/">Powered by Materialize</a>
+        </div>
+
+    </div>
+</footer>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
