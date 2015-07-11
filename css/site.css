@@ -2,14 +2,26 @@
     color: pink;
 }
 
+
+.my-face {
+    border-radius: 50%;
+}
+
 .social-icon {
-    color: #eeeeee;
+    color:         #eeeeee;
+    padding:       6px;
+    border:        3px solid;
+    border-radius: 50%;
 
     -o-transition:      .25s;
     -ms-transition:     .25s;
     -moz-transition:    .25s;
     -webkit-transition: .25s;
     transition:         .25s;
+}
+
+.form-icon {
+    color:         #bdbdbd;
 }
 
 .social-icon:hover {
