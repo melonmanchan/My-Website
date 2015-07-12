@@ -8,9 +8,19 @@ $(document).ready(function () {
        var mail     = $("#email").val();
        var subject  = $("#subject").val();
 
-        console.log(msg);
-        console.log(mail);
-        console.log(subject)
-        $('#modal1').openModal();
+        payload = {subject: subject, email: mail, message: msg};
+
+        $.ajax({
+            type:    "POST",
+            url:     "contact-form.php",
+            data:    payload,
+            success: function (data, status, req) {
+                console.log(data);
+                console.log(status);
+                console.log(req);
+                $('#modal1').openModal();
+            }
+        });
+
     });
 });
