@@ -14,7 +14,7 @@ $(document).ready(function () {
         $.ajax({
             type:    "POST",
             url:     "http://46.101.248.58:5000/sendmail",
-            dataType: "jsonp",
+            crossDomain: true,
             data:    payload,
             success: function (data, status, req) {
                 console.log(data);
