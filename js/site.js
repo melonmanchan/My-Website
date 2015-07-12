@@ -13,7 +13,7 @@ $(document).ready(function () {
         // Send mail to the local python mail server
         $.ajax({
             type:    "POST",
-            url:     window.location.href + "/sendmail",
+            url:     window.location.host + "/sendmail",
             data:    payload,
             success: function (data, status, req) {
                 console.log(data);
