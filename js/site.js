@@ -16,10 +16,7 @@ $(document).ready(function () {
             url:     "http://46.101.248.58:5000/sendmail",
             crossDomain: true,
             data:    payload,
-            success: function (data, status, req) {
-                console.log(data);
-                console.log(status);
-                console.log(req);
+            complete: function (data, status, req) {
                 $('#modal1').openModal();
             }
         });
