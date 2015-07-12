@@ -15,7 +15,7 @@ def hello():
 
 def send_mail(email, message, subject):
         return requests.post(
-            "https://api.mailgun.net/v3/sandbox12e603e0bce5426bbe66f14c68530ae3.mailgun.org/messages"
+            "https://api.mailgun.net/v3/sandbox12e603e0bce5426bbe66f14c68530ae3.mailgun.org/messages",
             auth=("api", "xxxx"),
             data={"from": email,
                   "to": ["melonmanchan@gmail.com"],
