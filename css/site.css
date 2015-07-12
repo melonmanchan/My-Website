@@ -22,8 +22,13 @@
     color:         #bdbdbd;
 }
 
+.social-icon i {
+    font-size: 2em !important;
+}
+
+
 .social-icon:hover {
-    color: #ff9800;
+    color: #e65100 !important;
 }
 
 .resume:hover {
