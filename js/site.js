@@ -17,6 +17,10 @@ $(document).ready(function () {
             crossDomain: true,
             data:    payload,
             complete: function (data, status, req) {
+                $("#message").val("");
+                $("#email").val("");
+                $("#subject").val("");
+
                 $('#modal1').openModal();
             }
         });
