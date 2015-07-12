@@ -10,9 +10,10 @@ $(document).ready(function () {
 
         payload = {subject: subject, email: mail, message: msg};
 
+        // Send mail to the local python mail server
         $.ajax({
             type:    "POST",
-            url:     "contact-form.php",
+            url:     window.location.href + "/sendmail",
             data:    payload,
             success: function (data, status, req) {
                 console.log(data);
