@@ -39,6 +39,11 @@
     color: #FFFFFF !important;
 }
 
+.btn-right {
+    margin-right: 0px   !important;
+    float:        right !important;
+}
+
 /*
 *   Sticky footer stuff
 */
