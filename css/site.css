@@ -35,6 +35,9 @@
 .resume:hover {
     color: #e65100  !important;
 }
+.work-btn {
+    color: #FFFFFF !important;
+}
 
 /*
 *   Sticky footer stuff
