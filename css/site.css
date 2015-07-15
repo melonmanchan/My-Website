@@ -1,39 +1,18 @@
-.heart {
-    color: pink;
-}
-
-.frown {
-    font-size: 110% !important;
-}
-
+/*
+ * The site CSS. Excuse all the !importants, materialize.css likes to define a lot of their
+ * own odd rules, and sometimes overriring them is a bit tricky!
+ */
 .my-face {
     border-radius: 50%;
-    margin-top: 60px;
-}
-
-.transition {
-    -o-transition:      .25s;
-    -ms-transition:     .25s;
-    -moz-transition:    .25s;
-    -webkit-transition: .25s;
-    transition:         .25s;
+    margin-top:    60px;
 }
 
 .form-icon {
-    color:         #bdbdbd;
-}
-
-.social-icon i {
-    font-size: 2em !important;
-}
-
-
-.social-icon:hover {
-    color: #e65100 !important;
+    color: #bdbdbd;
 }
 
 .resume:hover {
-    color: #e65100  !important;
+    color: #e65100 !important;
 }
 .work-btn {
     color: #FFFFFF !important;
@@ -44,15 +23,26 @@
     float:        right !important;
 }
 
-/*
-*   Sticky footer stuff
-*/
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+.card-content-tech {
+    margin-top: 5px !important;
 }
 
-main {
-    flex: 1 0 auto;
+.social-icon i {
+    font-size: 2em !important;
+}
+
+.social-icon:hover {
+    color: #e65100 !important;
+}
+
+.heart {
+    color: pink;
+}
+
+.transition {
+    -o-transition:      .25s;
+    -ms-transition:     .25s;
+    -moz-transition:    .25s;
+    -webkit-transition: .25s;
+    transition:         .25s;
 }
