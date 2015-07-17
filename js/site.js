@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
     $(".button-collapse").sideNav();
+    $('.scrollspy').scrollSpy();
     $("form").submit(function (event) {
        event.preventDefault();
        $("#send-msg").attr("disabled", true);
