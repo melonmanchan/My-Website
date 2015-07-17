@@ -6,7 +6,11 @@
     border-radius: 50%;
 }
 
-
+.navbar-logo {
+    margin-top: 1px;
+    background-color: white;
+    height: 60px !important;
+}
 #about-me {
     margin-top: 60px;
 }
