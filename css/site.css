@@ -7,9 +7,7 @@
 }
 
 .navbar-logo {
-    margin-top: 1px;
-    background-color: white;
-    height: 60px !important;
+    margin-top: 15px;
 }
 #about-me {
     margin-top: 60px;
@@ -20,10 +18,14 @@
     padding-left:  55px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .about-description {
         padding-right: 0px;
         padding-left:  0px;
+    }
+
+    .navbar-logo {
+        max-width: 60%;
     }
 }
 
