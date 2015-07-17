@@ -11,7 +11,9 @@
     margin-top: 60px;
 }
 
-.about-desc {
+.about-description {
+    padding-right: 55px;
+    padding-left:  55px;
 }
 .form-icon {
     color: #bdbdbd;
