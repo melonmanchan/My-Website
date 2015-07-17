@@ -9,6 +9,11 @@
 .navbar-logo {
     margin-top: 15px;
 }
+
+.navbar-logo:hover {
+    -webkit-filter: drop-shadow(2px 2px 2px #222);
+    filter:         drop-shadow(2px 2px 2px #222);
+}
 #about-me {
     margin-top: 60px;
 }
