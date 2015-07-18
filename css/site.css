@@ -47,7 +47,15 @@
 }
 
 .card-content-tech {
-    margin-top: 6px !important;
+    margin-top: 8px !important;
+}
+
+.tech-item {
+    padding:       4px;
+    color:         white;
+    margin-left:   2px;
+    margin-right:  2px;
+    border-radius: 4px;
 }
 .social-icon i {
     font-size: 2em !important;
