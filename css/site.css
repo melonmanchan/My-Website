@@ -46,6 +46,10 @@
     float:        right !important;
 }
 
+.card-title {
+    text-shadow: 2px 1px #000;
+}
+
 .card-content-tech {
     margin-top: 8px !important;
 }
