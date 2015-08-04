@@ -19,7 +19,16 @@
     padding-left:  55px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1205px) {
+    .small-logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1205px) {
+    .big-logo {
+        display: none;
+    }
     .about-description {
         padding-right: 0px;
         padding-left:  0px;
