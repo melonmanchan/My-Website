@@ -1,6 +1,7 @@
 // Here be the site javascript!
 
 $(document).ready(function () {
+    alert("hello");
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
     $("form").submit(function (event) {
