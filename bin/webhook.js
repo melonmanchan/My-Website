@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
         res.statusCode = 404;
         res.end('error')
     })
-}).listen(5000);
+}).listen(1234);
 
 handler.on('push', function (event) {
     if (event.payload.ref === 'refs/heads/master') {
