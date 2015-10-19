@@ -42,14 +42,19 @@ gulp.task('html', function() {
         .pipe(reload({stream: true}))
 });
 
-gulp.task('copy-res', function() {
+gulp.task('copy-res', ['copy-img'], function() {
    return gulp.src(['res/**/*', 'font/**/*'], { base: '.' })
+        .pipe(gulp.dest('./dist/'))
+});
+
+gulp.task('copy-img', function() {
+    return gulp.src(['img/**/*'], { base: '.' })
         .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('watch', ['js', 'css', 'html', 'copy-res'], function() {
     browserSync({
-        server: {baseDir: ['dist', '.']}
+        server: {baseDir: 'dist'}
     });
 
     gulp.watch(['./css/*.css'],  ['css'],   reload);
