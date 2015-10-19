@@ -4,6 +4,7 @@ var minifyCSS    = require('gulp-minify-css');
 var uglify       = require('gulp-uglify');
 var concat       = require('gulp-concat');
 var minifyHTML   = require('gulp-minify-html');
+var imagemin     = require('gulp-imagemin');
 
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
@@ -49,6 +50,7 @@ gulp.task('copy-res', ['copy-img'], function() {
 
 gulp.task('copy-img', function() {
     return gulp.src(['img/**/*'], { base: '.' })
+        .pipe(imagemin({progressive: true}))
         .pipe(gulp.dest('./dist/'))
 });
 

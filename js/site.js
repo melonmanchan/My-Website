@@ -12,7 +12,7 @@ $(document).ready(function () {
        var mail     = $("#email").val();
        var subject  = $("#subject").val();
 
-        payload = {subject: subject, email: mail, message: msg};
+       var payload = {subject: subject, email: mail, message: msg};
 
         // Send mail to the local python mail server
         $.ajax({
