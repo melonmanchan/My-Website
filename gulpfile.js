@@ -43,7 +43,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('copy-res', function() {
-   return gulp.src(['res/**/*'], { base: '.' })
+   return gulp.src(['res/**/*', 'font/**/*'], { base: '.' })
         .pipe(gulp.dest('./dist/'))
 });
 
