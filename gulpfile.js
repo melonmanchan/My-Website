@@ -3,6 +3,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyCSS    = require('gulp-minify-css');
 var uglify       = require('gulp-uglify');
 var concat       = require('gulp-concat');
+var minifyHTML   = require('gulp-minify-html');
 
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
@@ -34,16 +35,24 @@ gulp.task('css', function() {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('watch', ['js', 'css'], function() {
+gulp.task('html', function() {
+    return gulp.src('index.html')
+        .pipe(minifyHTML())
+        .pipe(gulp.dest('./dist/'))
+        .pipe(reload({stream: true}))
+});
+
+
+gulp.task('watch', ['js', 'css', 'html'], function() {
     browserSync({
-        server: {baseDir: '.'}
+        server: {baseDir: ['dist', '.']}
     });
 
-    gulp.watch(['./css/*.css'], ['css'],    reload);
-    gulp.watch([['./js/*.js']], ['js'],     reload);
-    gulp.watch(['index.html']).on('change', reload);
+    gulp.watch(['./css/*.css'],  ['css'],   reload);
+    gulp.watch([['./js/*.js']],  ['js'],    reload);
+    gulp.watch([['index.html']], ['html'],  reload);
 });
 
 
 gulp.task('default', ['watch']);
-gulp.task('build',   ['js', 'css']);
+gulp.task('build',   ['js', 'css', 'html']);
