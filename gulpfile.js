@@ -30,7 +30,7 @@ gulp.task('js', function() {
 gulp.task('css', function() {
     return gulp.src(['./css/*.css'])
         .pipe(autoprefixer())
-        .pipe(gulpif(options.env !== 'development', minifyCSS()))
+        .pipe(gulpif(options.env !== 'development', minifyCSS({keepSpecialComments: 0})))
         .pipe(concat('dist.css'))
         .pipe(gulp.dest('./dist/'))
         .pipe(reload({stream: true}));
