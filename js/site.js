@@ -1,6 +1,11 @@
 // Here be the site javascript!
 
 $(document).ready(function () {
+
+    $('.preload-section').fadeOut(function() {
+        $('.profile').fadeIn();
+    });
+
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
     $("form").submit(function (event) {
