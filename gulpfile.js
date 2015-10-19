@@ -42,8 +42,12 @@ gulp.task('html', function() {
         .pipe(reload({stream: true}))
 });
 
+gulp.task('copy-res', function() {
+   return gulp.src('res/**/*')
+        .pipe(gulp.dest('./dist/'))
+});
 
-gulp.task('watch', ['js', 'css', 'html'], function() {
+gulp.task('watch', ['js', 'css', 'html', 'copy-res'], function() {
     browserSync({
         server: {baseDir: ['dist', '.']}
     });
@@ -55,4 +59,4 @@ gulp.task('watch', ['js', 'css', 'html'], function() {
 
 
 gulp.task('default', ['watch']);
-gulp.task('build',   ['js', 'css', 'html']);
+gulp.task('build',   ['js', 'css', 'html', 'copy-res']);
