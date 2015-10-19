@@ -17,7 +17,7 @@ $(document).ready(function () {
         // Send mail to the local python mail server
         $.ajax({
             type:    "POST",
-            url:     "http://46.101.248.58:5000/sendmail",
+            url:     "http://mattij.com:5000/sendmail",
             crossDomain: true,
             data:    payload,
             complete: function (data, status, req) {
