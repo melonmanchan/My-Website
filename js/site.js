@@ -2,6 +2,8 @@
 
 $(document).ready(function () {
 
+    new WOW().init();
+
     $('.preload-section').fadeOut(function() {
         $('.profile').fadeIn();
     });
