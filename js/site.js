@@ -19,24 +19,27 @@ $(document).ready(function () {
        var mail     = $("#email").val();
        var subject  = $("#subject").val();
 
-       var payload = {subject: subject, email: mail, message: msg};
+        if (msg !== "" && mail !== "" && subject !== "") {
+           var payload = {subject: subject, email: mail, message: msg};
 
-        // Send mail to the local python mail server
-        $.ajax({
-            type:    "POST",
-            url:     "http://mattij.com:5000/sendmail",
-            crossDomain: true,
-            data:    payload,
-            complete: function (data, status, req) {
-                $("#fa-send").toggleClass("fa-envelope-o").toggleClass("fa-spinner").toggleClass("fa-spin");
+            // Send mail to the local python mail server
+            $.ajax({
+                type:    "POST",
+                url:     "http://mattij.com:5000/sendmail",
+                crossDomain: true,
+                data:    payload,
+                complete: function (data, status, req) {
+                    $("#fa-send").toggleClass("fa-envelope-o").toggleClass("fa-spinner").toggleClass("fa-spin");
 
-                $("#message").val("");
-                $("#email").val("");
-                $("#subject").val("");
-                $("#send-msg").attr("disabled", false);
-                $('#modal1').openModal();
-            }
-        });
-
+                    $("#message").val("");
+                    $("#email").val("");
+                    $("#subject").val("");
+                    $("#send-msg").attr("disabled", false);
+                    $('#modal1').openModal();
+                }
+            });
+        } else {
+            alert("Congrats! Looks like you managed to bypass MaterializeCSS form validation. Please fill all the fields");
+        }
     });
 });
