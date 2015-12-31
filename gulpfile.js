@@ -56,7 +56,8 @@ gulp.task('copy-img', function() {
 
 gulp.task('watch', ['js', 'css', 'html', 'copy-res'], function() {
     browserSync({
-        server: {baseDir: 'dist'}
+        server: {baseDir: 'dist'},
+        open: false
     });
 
     gulp.watch(['./css/*.css'],  ['css'],   reload);
