@@ -26,7 +26,6 @@ $(document).ready(function () {
             $.ajax({
                 type:    "POST",
                 url:     "https://mattij.com:5000/sendmail",
-                crossDomain: true,
                 data:    payload,
                 complete: function (data, status, req) {
                     $("#fa-send").toggleClass("fa-envelope-o").toggleClass("fa-spinner").toggleClass("fa-spin");
