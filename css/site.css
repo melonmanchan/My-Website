@@ -105,6 +105,25 @@
     float:        right !important;
 }
 
+.project-row {
+    justify-content: space-around;
+    display: flex;
+}
+
+.card {
+    width: 45%;
+    display: inline-block
+}
+
+@media(max-width: 1000px) {
+    .project-row {
+        display: block;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
 
 .card-title {
     text-shadow:   2px 1px #000;
