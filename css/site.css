@@ -135,6 +135,10 @@
     height: 180px;
 }
 
+.card-content p:not(first-child) {
+    margin-top: 5px !important;
+}
+
 .card-content-tech {
     position: absolute;
     bottom: 90px;
