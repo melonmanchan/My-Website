@@ -106,14 +106,15 @@
     float:        right !important;
 }
 
-.project-row {
-    justify-content: space-around;
+.project-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
     width: 45%;
-    display: inline-block
+    display: inline-block;
 }
 
 @media(max-width: 1000px) {
