@@ -8,6 +8,12 @@ $(document).ready(function () {
         $('.profile').fadeIn();
     });
 
+    $('img').unveil(100, function () {
+        var cardContainer = $(this).parent().parent()
+        cardContainer.addClass('fadeIn');
+        cardContainer.removeClass('card-initial');
+    });
+
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
     $("form").submit(function (event) {
@@ -20,7 +26,7 @@ $(document).ready(function () {
        var subject  = $("#subject").val();
 
         if (msg !== "" && mail !== "" && subject !== "") {
-           var payload = {subject: subject, email: mail, message: msg};
+           var payload = { subject: subject, email: mail, message: msg };
 
             // Send mail to the local python mail server
             $.ajax({

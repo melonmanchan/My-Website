@@ -20,7 +20,7 @@ var knownOptions = {
 var options = minimist(process.argv.slice(2), knownOptions);
 
 gulp.task('js', function() {
-    return gulp.src(['./js/*.js'])
+    return gulp.src(['./js/jquery.js', './js/*.js'])
         .pipe(concat('dist.js'))
         .pipe(gulpif(options.env !== 'development', uglify({mangle: true})))
         .pipe(gulp.dest('./dist/'))

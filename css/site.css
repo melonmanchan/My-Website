@@ -112,6 +112,10 @@
     justify-content: space-around;
 }
 
+.card-initial {
+    opacity: 0;
+}
+
 .card {
     width: 45%;
     display: inline-block;
