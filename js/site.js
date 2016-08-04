@@ -5,13 +5,20 @@ $(document).ready(function () {
     new WOW().init();
 
     $('.preload-section').fadeOut(function() {
-        $('.profile').fadeIn();
+        $('header').fadeIn();
+        $('main').fadeIn();
+        $('footer').fadeIn();
+        $('header').removeClass('hidden')
+        $('main').removeClass('hidden')
+        $('footer').removeClass('hidden')
     });
 
     $('img').unveil(100, function () {
-        var cardContainer = $(this).parent().parent()
-        cardContainer.addClass('fadeIn');
-        cardContainer.removeClass('card-initial');
+        $(this).load(function () {
+            var cardContainer = $(this).parent().parent()
+            cardContainer.addClass('fadeIn');
+            cardContainer.removeClass('card-initial');
+        })
     });
 
     $(".button-collapse").sideNav();
