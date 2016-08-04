@@ -3,7 +3,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyCSS    = require('gulp-minify-css');
 var uglify       = require('gulp-uglify');
 var concat       = require('gulp-concat');
-var minifyHTML   = require('gulp-minify-html');
+var minifyHTML   = require('gulp-htmlmin');
 var imagemin     = require('gulp-imagemin');
 
 var browserSync = require('browser-sync');
@@ -38,7 +38,15 @@ gulp.task('css', function() {
 
 gulp.task('html', function() {
     return gulp.src('index.html')
-        .pipe(minifyHTML())
+        .pipe(minifyHTML({
+            removeComments:            true,
+            minifyCSS:                 true,
+            collapseWhitespace:        true,
+            collapseBooleanAttributes: true,
+            removeAttributeQuotes:     true,
+            removeEmptyAttributes:     true,
+            minifyJS:                  true
+        }))
         .pipe(gulp.dest('./dist/'))
         .pipe(reload({stream: true}))
 });
