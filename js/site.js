@@ -13,7 +13,7 @@ $(document).ready(function () {
         $('footer').removeClass('hidden')
     });
 
-    $('img').unveil(100, function () {
+    $('img').unveil(200, function () {
         $(this).load(function () {
             var cardContainer = $(this).parent().parent()
             cardContainer.addClass('fadeIn');
