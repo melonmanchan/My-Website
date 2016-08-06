@@ -1,58 +1,65 @@
 // Here be the site javascript!
 
-$(document).ready(function () {
+(function() {
+    'use strict'
 
-    new WOW().init();
+    var stylesheet = loadCSS('./dist.css');
 
-    $('.preload-section').fadeOut(function() {
-        $('header').fadeIn();
-        $('main').fadeIn();
-        $('footer').fadeIn();
-        $('header').removeClass('hidden')
-        $('main').removeClass('hidden')
-        $('footer').removeClass('hidden')
+    onloadCSS(stylesheet, function () {
+        $('.preload-section').fadeOut(function() {
+            $('header').fadeIn();
+            $('main').fadeIn();
+            $('footer').fadeIn();
+            $('header').removeClass('hidden')
+            $('main').removeClass('hidden')
+            $('footer').removeClass('hidden')
+        });
     });
 
-    $('img').unveil(200, function () {
-        $(this).load(function () {
-            var cardContainer = $(this).parent().parent()
-            cardContainer.addClass('fadeIn');
-            cardContainer.removeClass('card-initial');
-        })
+    $(document).ready(function () {
+
+        new WOW().init();
+
+        $('img').unveil(200, function () {
+            $(this).load(function () {
+                var cardContainer = $(this).parent().parent()
+                cardContainer.addClass('fadeIn');
+                cardContainer.removeClass('card-initial');
+            })
+        });
+
+        $(".button-collapse").sideNav();
+        $('.scrollspy').scrollSpy();
+        $("form").submit(function (event) {
+           event.preventDefault();
+           $("#send-msg").attr("disabled", true);
+
+           $("#fa-send").toggleClass("fa-envelope-o").toggleClass("fa-spinner").toggleClass("fa-spin");
+           var msg      =  $("#message").val();
+           var mail     = $("#email").val();
+           var subject  = $("#subject").val();
+
+            if (msg !== "" && mail !== "" && subject !== "") {
+               var payload = { subject: subject, email: mail, message: msg };
+
+                // Send mail to the local python mail server
+                $.ajax({
+                    type:    "POST",
+                    url:     "https://mattij.com:5000/sendmail",
+                    data:    payload,
+                    complete: function (data, status, req) {
+                        $("#fa-send").toggleClass("fa-envelope-o").toggleClass("fa-spinner").toggleClass("fa-spin");
+
+                        $("#message").val("");
+                        $("#email").val("");
+                        $("#subject").val("");
+                        $("#send-msg").attr("disabled", false);
+                        $('#modal1').openModal();
+                    }
+                });
+            } else {
+                alert("Congrats! Looks like you managed to bypass MaterializeCSS form validation. Please fill all the fields");
+            }
+        });
     });
-
-    $(".button-collapse").sideNav();
-    $('.scrollspy').scrollSpy();
-    $("form").submit(function (event) {
-       event.preventDefault();
-       $("#send-msg").attr("disabled", true);
-
-       $("#fa-send").toggleClass("fa-envelope-o").toggleClass("fa-spinner").toggleClass("fa-spin");
-       var msg      =  $("#message").val();
-       var mail     = $("#email").val();
-       var subject  = $("#subject").val();
-
-        if (msg !== "" && mail !== "" && subject !== "") {
-           var payload = { subject: subject, email: mail, message: msg };
-
-            // Send mail to the local python mail server
-            $.ajax({
-                type:    "POST",
-                url:     "https://mattij.com:5000/sendmail",
-                data:    payload,
-                complete: function (data, status, req) {
-                    $("#fa-send").toggleClass("fa-envelope-o").toggleClass("fa-spinner").toggleClass("fa-spin");
-
-                    $("#message").val("");
-                    $("#email").val("");
-                    $("#subject").val("");
-                    $("#send-msg").attr("disabled", false);
-                    $('#modal1').openModal();
-                }
-            });
-        } else {
-            alert("Congrats! Looks like you managed to bypass MaterializeCSS form validation. Please fill all the fields");
-        }
-    });
-});
-
+})();
