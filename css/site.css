@@ -94,6 +94,7 @@
 }
 
 @media(max-width: 1000px) {
+
     .project-row {
         display: block;
     }
@@ -113,6 +114,11 @@
     height: 180px;
 }
 
+@media (min-width: 1000px) and (max-width: 1400px) {
+    .card .card-content {
+        height: 250px;
+    }
+}
 
 @media(max-width: 700px) {
     .card .card-content {
