@@ -1,6 +1,5 @@
 /*
- * The site CSS. Excuse all the !importants, materialize.css likes to define a lot of their
- * own odd rules, and sometimes overriring them is a bit tricky!
+ * The site CSS!
  */
 .my-face {
     border-radius: 50%;
@@ -32,7 +31,7 @@
     margin-top: 15px;
 }
 
-#about-me {
+.profile {
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -66,16 +65,13 @@
     color: #bdbdbd;
 }
 
-.resume:hover {
-    color: #e65100 !important;
-}
-.work-btn {
-    color: #FFFFFF !important;
+.card .card-action .work-btn {
+    color: #FFFFFF;
 }
 
-.btn-right {
-    margin-right: 0  !important;
-    float:        right !important;
+.card .card-action .btn-right {
+    margin-right: 0 ;
+    float:        right;
 }
 
 .project-wrapper {
@@ -126,8 +122,8 @@
     }
 }
 
-.card-content p:not(first-child) {
-    margin-top: 5px !important;
+.card .card-content p:not(first-child) {
+    margin-top: 5px;
 }
 
 .card-content-tech {
@@ -142,12 +138,9 @@
     margin-right:  2px;
     border-radius: 4px;
 }
-.social-icon i {
-    font-size: 2em !important;
-}
 
-.social-icon:hover {
-    color: #e65100 !important;
+.page-footer .social-icon i {
+    font-size: 2em;
 }
 
 .transition {
