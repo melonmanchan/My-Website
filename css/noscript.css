@@ -1,0 +1,12 @@
+body .preload-section {
+    display: none;
+}
+
+body .hidden {
+    display: block;
+}
+
+.project-wrapper .card-initial {
+    opacity: 1;
+}
+
