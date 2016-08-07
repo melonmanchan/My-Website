@@ -85,7 +85,7 @@
 }
 
 .card-content {
-    height: 180px;
+    height: 14em;
 }
 
 @media (min-width: 1000px) and (max-width: 1400px) {
@@ -97,6 +97,10 @@
 @media(max-width: 700px) {
     .card .card-content {
         overflow: auto;
+    }
+
+    .card .card-content-tech {
+        position: inherit;
     }
 }
 
