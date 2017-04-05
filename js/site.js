@@ -3,30 +3,9 @@
 (function() {
     'use strict'
 
-    var stylesheet = loadCSS('./dist.css');
-
-    onloadCSS(stylesheet, function () {
-        $('.preload-section').fadeOut(function() {
-            $('header').fadeIn();
-            $('main').fadeIn();
-            $('footer').fadeIn();
-            $('header').removeClass('hidden')
-            $('main').removeClass('hidden')
-            $('footer').removeClass('hidden')
-        });
-    });
-
     $(document).ready(function () {
 
         new WOW().init();
-
-        $('img').unveil(200, function () {
-            $(this).load(function () {
-                var cardContainer = $(this).parent().parent()
-                cardContainer.addClass('fadeIn');
-                cardContainer.removeClass('card-initial');
-            })
-        });
 
         $(".button-collapse").sideNav();
         $('.scrollspy').scrollSpy();
